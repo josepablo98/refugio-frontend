@@ -42,28 +42,7 @@ html, body, #root {
   position: relative;
 }
 
-/* Ahora el botón audio fuera del flujo del wrapper, relativo al breathing-container */
-.audio-toggle-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #f0f4f8;
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-  transition: background-color 0.3s ease;
-  z-index: 10; /* por encima del timer */
-}
 
-.audio-toggle-button:hover {
-  background-color: #e0f2fe;
-}
 
 .start-stop-button {
   background-color: #4caf50;

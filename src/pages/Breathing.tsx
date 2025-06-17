@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import { MdVolumeUp, MdVolumeOff } from "react-icons/md";
 import "../styles.css";
 
 type Phase = {
@@ -25,8 +24,6 @@ export const Breathing: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [phaseIndex, setPhaseIndex] = useState(0);
   const [key, setKey] = useState(0);
-  const [audioPlaying, setAudioPlaying] = useState(false);
-  const [audio] = useState(new Audio("/zen-music.mp3"));
 
   const currentPhase = phases[phaseIndex];
 
@@ -40,38 +37,16 @@ export const Breathing: React.FC = () => {
     }
   };
 
-  const toggleAudio = () => {
-    if (audio.paused) {
-      audio.play();
-      setAudioPlaying(true);
-    } else {
-      audio.pause();
-      setAudioPlaying(false);
-    }
-  };
-
   return (
     <div className="breathing-container">
       <div className="timer-wrapper">
-        <button
-          className="audio-toggle-button"
-          onClick={toggleAudio}
-          aria-label={audioPlaying ? "Silenciar audio" : "Activar audio"}
-        >
-          {audioPlaying ? (
-            <MdVolumeUp size={28} color="#4CAF50" />
-          ) : (
-            <MdVolumeOff size={28} color="#888" />
-          )}
-        </button>
-
         <CountdownCircleTimer
           key={key}
           isPlaying={isPlaying}
           duration={currentPhase.duration}
           // @ts-ignore
           colors={[currentPhase.color]}
-          strokeWidth={2}
+          strokeWidth={10}
           size={300}
           onComplete={() => {
             if (phaseIndex < phases.length - 1) {
