@@ -1,1 +1,5 @@
-export * from "./Breathing"
+export * from "./BreathingPage"
+export * from "./NotesPage"
+export * from "./OpenYourHeartPage"
+export * from "./WhisperPage"
+export * from "./HomePage"

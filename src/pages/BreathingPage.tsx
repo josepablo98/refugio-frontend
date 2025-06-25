@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import "../styles.css";
+import { useNavigate } from "react-router-dom";
 
 type Phase = {
   name: string;
@@ -20,7 +20,8 @@ const phases: Phase[] = [
   { name: "exhale", duration: 7, color: "#A5D6A7", text: "Exhala despacio" },
 ];
 
-export const Breathing: React.FC = () => {
+export const BreathingPage: React.FC = () => {
+  const navigate = useNavigate();
   const [isPlaying, setIsPlaying] = useState(false);
   const [phaseIndex, setPhaseIndex] = useState(0);
   const [key, setKey] = useState(0);
@@ -73,9 +74,15 @@ export const Breathing: React.FC = () => {
           }
         </CountdownCircleTimer>
 
-        <button className="start-stop-button" onClick={handleToggle}>
-          {isPlaying ? "Parar" : "Empezar"}
-        </button>
+        <div className="button-group">
+          <button className="start-stop-button" onClick={handleToggle}>
+            {isPlaying ? "Parar" : "Empezar"}
+          </button>
+
+          <button className="back-button" onClick={() => navigate("/home")}>
+            ← Atrás
+          </button>
+        </div>
       </div>
     </div>
   );
