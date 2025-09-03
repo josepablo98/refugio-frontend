@@ -178,3 +178,92 @@ html, body, #root {
   }
 }
 
+.notes-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+/* Carta */
+.card-image {
+  width: 250px; /* ajusta al tamaño de tu carta */
+  height: auto; /* mantiene la proporción original */
+  cursor: pointer;
+  animation: pulse-card 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse-card {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  max-width: 400px;
+  text-align: center;
+  animation: fade-in 0.3s ease;
+}
+
+.phrase-text {
+  font-size: 1.4rem;
+  font-family: 'Dancing Script', cursive;
+  color: #333;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.back-button-notes {
+  margin-top: -40px; /* Añade un margen superior para separar el botón de la imagen */
+}
+
+.next-button {
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.next-button:hover:not(:disabled) {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
