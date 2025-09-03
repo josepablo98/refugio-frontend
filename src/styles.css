@@ -222,10 +222,11 @@ html, body, #root {
 }
 
 .modal-content {
+  position: relative; /* Añadido para que los controles se posicionen dentro del modal */
   background: white;
   padding: 30px 40px;
   border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   text-align: center;
   animation: fade-in 0.3s ease;
@@ -266,4 +267,27 @@ html, body, #root {
 .next-button:hover:not(:disabled) {
   background-color: #45a049;
   transform: scale(1.05);
+}
+
+.audio-controls {
+  position: absolute;
+  bottom: 10px; /* Reduce la distancia desde el borde inferior */
+  right: 10px; /* Reduce la distancia desde el borde derecho */
+  display: flex;
+  gap: 5px; /* Reduce el espacio entre los botones */
+  z-index: 10;
+}
+
+.audio-icon {
+  font-size: 18px; /* Reduce el tamaño del icono */
+  color: #555; /* Color sutil */
+  background: none; /* Sin fondo */
+  border: none; /* Sin bordes */
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.audio-icon:hover {
+  transform: scale(1.2); /* Efecto de agrandamiento al pasar el cursor */
+  color: #000; /* Color más oscuro al pasar el cursor */
 }

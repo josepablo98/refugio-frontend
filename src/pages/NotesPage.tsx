@@ -1,15 +1,28 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaPlay, FaPause, FaStepForward } from "react-icons/fa"; // Importa los iconos
 import phrases from "../assets/phrases.json";
-import cartaImg from "../assets/carta.png"; // 👈 tu imagen real
+import cartaImg from "../assets/carta.png";
+
+const audioFiles = [
+  "/src/assets/audios/Clouds - One Direction (Lyrics).mp3",
+  "/src/assets/audios/One Direction - I Want to Write You a Song (Audio).mp3",
+  "/src/assets/audios/One Direction - One Way Or Another [Teenage Kicks] (Lyrics).mp3",
+  "/src/assets/audios/One Direction - Steal My Girl (Lyrics).mp3",
+  "/src/assets/audios/One Direction - What Makes You Beautiful(Lyrics).mp3",
+];
 
 export const NotesPage = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [usedIndices, setUsedIndices] = useState<number[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  const [audioIndex, setAudioIndex] = useState<number>(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const currentPhrase = currentIndex !== null ? phrases[currentIndex]?.text : "";
+  const currentPhrase =
+    currentIndex !== null ? phrases[currentIndex]?.text : "";
 
   const handleNextPhrase = () => {
     if (usedIndices.length < phrases.length) {
@@ -25,18 +38,54 @@ export const NotesPage = () => {
 
   const handleOpenModal = () => {
     setIsOpen(true);
-    handleNextPhrase(); // Selecciona la primera frase aleatoria al abrir el modal
+    handleNextPhrase();
+    setIsPlaying(false); // Asegúrate de que el audio no se reproduzca automáticamente
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reinicia el audio
+    }
   };
 
   const handleCloseModal = () => {
     setIsOpen(false);
-    setUsedIndices([]); // Limpia los índices usados
-    setCurrentIndex(null); // Resetea el índice actual
+    setUsedIndices([]);
+    setCurrentIndex(null);
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    setIsPlaying(false);
+  };
+
+  const handlePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleNextSong = () => {
+    setAudioIndex((prevIndex) => {
+      const nextIndex = (prevIndex + 1) % audioFiles.length;
+      if (audioRef.current) {
+        audioRef.current.src = audioFiles[nextIndex];
+        audioRef.current.pause(); // Pausa cualquier reproducción en curso
+        audioRef.current.load(); // Carga el nuevo archivo
+        audioRef.current.onloadeddata = () => {
+          audioRef.current?.play(); // Reproduce el audio automáticamente cuando esté listo
+          setIsPlaying(true);
+        };
+      }
+      return nextIndex;
+    });
   };
 
   return (
     <div className="notes-container">
-      {/* Carta como imagen */}
       <img
         src={cartaImg}
         alt="Carta"
@@ -44,7 +93,10 @@ export const NotesPage = () => {
         onClick={handleOpenModal}
       />
 
-      <button className="back-button back-button-notes" onClick={() => navigate("/home")}>
+      <button
+        className="back-button back-button-notes"
+        onClick={() => navigate("/home")}
+      >
         ← Atrás
       </button>
 
@@ -59,9 +111,23 @@ export const NotesPage = () => {
             >
               → Siguiente
             </button>
+            <div className="audio-controls">
+              <button onClick={handlePlayPause}>
+                {isPlaying ? (
+                  <FaPause className="audio-icon" />
+                ) : (
+                  <FaPlay className="audio-icon" />
+                )}
+              </button>
+              <button onClick={handleNextSong}>
+                <FaStepForward className="audio-icon" />
+              </button>
+            </div>
           </div>
         </div>
       )}
+
+      <audio ref={audioRef} src={audioFiles[audioIndex]} />
     </div>
   );
 };
