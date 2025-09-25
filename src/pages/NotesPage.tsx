@@ -5,11 +5,11 @@ import phrases from "../assets/phrases.json";
 import cartaImg from "../assets/carta.png";
 
 const audioFiles = [
-  "/src/assets/audios/Clouds - One Direction (Lyrics).mp3",
-  "/src/assets/audios/One Direction - I Want to Write You a Song (Audio).mp3",
-  "/src/assets/audios/One Direction - One Way Or Another [Teenage Kicks] (Lyrics).mp3",
-  "/src/assets/audios/One Direction - Steal My Girl (Lyrics).mp3",
-  "/src/assets/audios/One Direction - What Makes You Beautiful(Lyrics).mp3",
+  "/Clouds - One Direction (Lyrics).mp3",
+  "/One Direction - I Want to Write You a Song (Audio).mp3",
+  "/One Direction - One Way Or Another [Teenage Kicks] (Lyrics).mp3",
+  "/One Direction - Steal My Girl (Lyrics).mp3",
+  "/One Direction - What Makes You Beautiful(Lyrics).mp3",
 ];
 
 export const NotesPage = () => {

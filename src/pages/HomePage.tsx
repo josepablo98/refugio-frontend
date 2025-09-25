@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaHeart, FaFeatherAlt, FaStickyNote, FaWind } from "react-icons/fa";
+import { FaHeart, FaStickyNote, FaWind } from "react-icons/fa";
 
 const cards = [
   {
@@ -8,12 +8,15 @@ const cards = [
     link: "/openyourheart",
   },
   {
-    text: "Susurros",
-    icon: <FaFeatherAlt color="#457B9D" />,
-    link: "/whisper",
+    text: "Notas",
+    icon: <FaStickyNote color="#F4A261" />,
+    link: "/notes"
   },
-  { text: "Notas", icon: <FaStickyNote color="#F4A261" />, link: "/notes" },
-  { text: "Respirar", icon: <FaWind color="#2A9D8F" />, link: "/breathing" },
+  {
+    text: "Respirar",
+    icon: <FaWind color="#2A9D8F" />,
+    link: "/breathing"
+  },
 ];
 
 export const HomePage = () => {
@@ -31,11 +34,6 @@ export const HomePage = () => {
           <div className="home-card-text">{card.text}</div>
         </motion.div>
       ))}
-      <div className="home-footer-text">
-        Esta página es para ti, mi amor. Para acompañarte cuando lo necesites,
-        para recordarte que siempre estoy a tu lado, y para ayudarte a respirar
-        cuando el mundo pese. Te quiero muchísimo.
-      </div>
     </div>
   );
 };

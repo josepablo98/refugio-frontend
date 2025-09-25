@@ -1,14 +1,230 @@
 [
   {
     "id": 1,
-    "text": "Eres más valiosa de lo que crees."
+    "text": "Eres la persona que más alegría trae a mi vida."
   },
   {
     "id": 2,
-    "text": "Tu sonrisa ilumina hasta los días más grises."
+    "text": "Cada día a tu lado me hace sentir afortunado."
   },
   {
     "id": 3,
-    "text": "Mereces todo lo bueno que te pasa, y más."
+    "text": "Te valoro más de lo que las palabras pueden expresar."
+  },
+  {
+    "id": 4,
+    "text": "Eres muchísimo mejor de lo que tú misma piensas."
+  },
+  {
+    "id": 5,
+    "text": "Tu compañía me da paz y felicidad."
+  },
+  {
+    "id": 6,
+    "text": "Me encanta cómo me haces sentir querido."
+  },
+  {
+    "id": 7,
+    "text": "Tu amor me motiva a ser mejor cada día."
+  },
+  {
+    "id": 8,
+    "text": "Nunca olvides lo valiosa que eres para mí."
+  },
+  {
+    "id": 9,
+    "text": "Tu apoyo en la defensa del TFG fue un regalo que jamás olvidaré."
+  },
+  {
+    "id": 10,
+    "text": "Eres mi mayor motivo para sonreír."
+  },
+  {
+    "id": 11,
+    "text": "Me haces sentir que todo es posible."
+  },
+  {
+    "id": 12,
+    "text": "Me encantó que vinieras a mi pueblo cuando estuve malo, significó mucho para mí."
+  },
+  {
+    "id": 13,
+    "text": "Siempre estás cuando más te necesito."
+  },
+  {
+    "id": 14,
+    "text": "Tu cariño me cura en los días difíciles."
+  },
+  {
+    "id": 15,
+    "text": "No sabes lo importante que eres en mi vida."
+  },
+  {
+    "id": 16,
+    "text": "Eres mucho más fuerte y especial de lo que crees."
+  },
+  {
+    "id": 17,
+    "text": "Cada recuerdo contigo es un tesoro."
+  },
+  {
+    "id": 18,
+    "text": "Eres la razón por la que me siento afortunado cada día."
+  },
+  {
+    "id": 19,
+    "text": "Te admiro más de lo que imaginas."
+  },
+  {
+    "id": 20,
+    "text": "Eres mi lugar seguro en el mundo."
+  },
+  {
+    "id": 21,
+    "text": "Me haces ver lo bonito que es vivir."
+  },
+  {
+    "id": 22,
+    "text": "Tenerte a mi lado me llena de felicidad."
+  },
+  {
+    "id": 23,
+    "text": "No hay día en que no agradezca tenerte en mi vida."
+  },
+  {
+    "id": 24,
+    "text": "Eres un regalo que la vida me dio."
+  },
+  {
+    "id": 25,
+    "text": "Tu presencia hace que todo sea mejor."
+  },
+  {
+    "id": 26,
+    "text": "Me siento orgulloso de ti y de lo increíble que eres."
+  },
+  {
+    "id": 27,
+    "text": "Eres mi alegría diaria."
+  },
+  {
+    "id": 28,
+    "text": "Me haces sentir amado como nunca antes."
+  },
+  {
+    "id": 29,
+    "text": "Cada detalle tuyo me enamora aún más."
+  },
+  {
+    "id": 30,
+    "text": "Gracias por apoyarme siempre, incluso en mis nervios del TFG."
+  },
+  {
+    "id": 31,
+    "text": "Tu amor es mi mayor fortaleza."
+  },
+  {
+    "id": 32,
+    "text": "Eres mucho más increíble de lo que alcanzas a ver en ti."
+  },
+  {
+    "id": 33,
+    "text": "Cuando pienso en felicidad, pienso en ti."
+  },
+  {
+    "id": 34,
+    "text": "Eres mi mejor decisión."
+  },
+  {
+    "id": 35,
+    "text": "Estar contigo hace que todo tenga sentido."
+  },
+  {
+    "id": 36,
+    "text": "Me haces querer ser mejor cada día."
+  },
+  {
+    "id": 37,
+    "text": "Tu compañía es mi lugar favorito."
+  },
+  {
+    "id": 38,
+    "text": "Te amo más de lo que imaginas."
+  },
+  {
+    "id": 39,
+    "text": "Eres la persona que siempre soñé tener a mi lado."
+  },
+  {
+    "id": 40,
+    "text": "Nunca olvidaré lo bien que me hiciste sentir en mis momentos difíciles."
+  },
+  {
+    "id": 41,
+    "text": "Eres la razón por la que mis días tienen color."
+  },
+  {
+    "id": 42,
+    "text": "Me haces sentir completo."
+  },
+  {
+    "id": 43,
+    "text": "Tu forma de cuidarme me hace sentir único."
+  },
+  {
+    "id": 44,
+    "text": "Admiro la forma en la que iluminas mi vida."
+  },
+  {
+    "id": 45,
+    "text": "Eres la prueba de que el amor verdadero existe."
+  },
+  {
+    "id": 46,
+    "text": "Gracias por ser tú, simplemente tú."
+  },
+  {
+    "id": 47,
+    "text": "Me haces feliz de una forma que nunca imaginé."
+  },
+  {
+    "id": 48,
+    "text": "Eres mi persona favorita en todo el mundo."
+  },
+  {
+    "id": 49,
+    "text": "Cuando estoy contigo, todo lo demás desaparece."
+  },
+  {
+    "id": 50,
+    "text": "Te amo por lo que eres y por lo que me haces sentir."
+  },
+  {
+    "id": 51,
+    "text": "Me acompañaste al hospital cuando estuve mal y eso significó mucho para mí."
+  },
+  {
+    "id": 52,
+    "text": "Si no fuera por ti, no sería nada."
+  },
+  {
+    "id": 53,
+    "text": "Me ayudaste a hacer la presentación del TFG."
+  },
+  {
+    "id": 54,
+    "text": "Me ayudaste a tener una alimentación más saludable."
+  },
+  {
+    "id": 55,
+    "text": "Me ayudaste a mejorar mi autoestima."
+  },
+  {
+    "id": 56,
+    "text": "Tienes muchos detallitos que me encantan."
+  },
+  {
+    "id": 57,
+    "text": "Me estás ayudando con el teórico del coche."
   }
 ]

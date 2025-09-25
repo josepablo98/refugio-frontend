@@ -23,6 +23,8 @@ html, body, #root {
   align-items: center; /* Centra las tarjetas horizontalmente */
   gap: 20px; /* Espacio entre las tarjetas */
   padding: 20px; /* Espaciado interno del contenedor */
+  justify-content: center;
+  height: 100vh;
 }
 
 .home-card {
