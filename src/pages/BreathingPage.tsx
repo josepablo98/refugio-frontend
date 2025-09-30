@@ -79,7 +79,7 @@ export const BreathingPage: React.FC = () => {
             {isPlaying ? "Parar" : "Empezar"}
           </button>
 
-          <button className="back-button" onClick={() => navigate("/home")}>
+          <button className="back-button breathing-back-button" onClick={() => navigate("/home")}>
             ← Atrás
           </button>
         </div>

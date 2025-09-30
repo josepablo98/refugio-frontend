@@ -160,6 +160,23 @@ html, body, #root {
   transform: scale(1.05);
 }
 
+.breathing-back-button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.breathing-back-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
 @keyframes breathe-text {
   0%, 100% {
     opacity: 0.7;
@@ -292,4 +309,220 @@ html, body, #root {
 .audio-icon:hover {
   transform: scale(1.2); /* Efecto de agrandamiento al pasar el cursor */
   color: #000; /* Color más oscuro al pasar el cursor */
+}
+
+
+
+/* Estilos para OpenYourHeartPage */
+.emoji-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.emoji-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 90vw;
+  width: 100%;
+  text-align: center;
+}
+
+.emoji-phrase {
+  font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+  color: #8B0040;
+  line-height: 1.4;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(139, 0, 64, 0.15);
+  animation: emoji-pulse 6s ease-in-out infinite;
+  min-height: 200px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji-nav-button {
+  background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+}
+
+.emoji-nav-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+}
+
+.emoji-nav-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.emoji-back-button {
+  margin-top: 0;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emoji-back-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+@keyframes emoji-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 768px) {
+  .emoji-phrase {
+    font-size: 2rem;
+    padding: 30px 20px;
+    min-height: 150px;
+  }
+  
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .emoji-nav-button {
+    width: 200px;
+  }
+}
+
+.gift-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 100;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.gift-box:hover {
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Modal del regalo */
+.gift-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.gift-modal-content {
+  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: 20px;
+  text-align: center;
+  border: 3px solid #ff69b4;
+}
+
+.gift-modal-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: #d63384;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gift-modal-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #495057;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.gift-modal-close {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  font-family: 'Dancing Script', cursive;
+}
+
+.gift-modal-close:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+@media (max-width: 768px) {
+  .gift-box {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .gift-modal-content {
+    margin: 10px;
+    padding: 30px 20px;
+  }
+  
+  .gift-modal-title {
+    font-size: 1.8rem;
+  }
+  
+  .gift-modal-text {
+    font-size: 1.1rem;
+  }
 }
